@@ -22,9 +22,9 @@
  
 	$pdf->SetFont('Arial','',10);
  
-include 'koneksi.php';
-$mahasiswa = mysqli_query($connect, "select * from antrian");
-while ($row = mysqli_fetch_array($mahasiswa)){
+	include 'koneksi.php';
+	$antrian = mysqli_query($connect, "select * from antrian");
+	while ($row = mysqli_fetch_array($antrian)){
     $pdf->Cell(35,6,$row['code_antrian'],1,0);
     $pdf->Cell(85,6,$row['nama'],1,0);
     $pdf->Cell(30,6,$row['no_telepon'],1,0);
